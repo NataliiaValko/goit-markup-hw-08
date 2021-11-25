@@ -1,0 +1,48 @@
+.footer-part-follow {
+  @media screen and(min-width: $desktop) {
+    display: flex;
+    align-items: flex-end;
+    width: 570px;
+  }
+}
+
+.footer-follow {
+  @media screen and(min-width: $desktop) {
+    width: 358px;
+    margin-right: 12px;
+  }
+}
+
+.follow-input,
+.follow-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.follow-input {
+  width: 100%;
+  max-width: 450px;
+  height: 50px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: transparent;
+  margin-bottom: 20px;
+
+  @media screen and(min-width: $tablet-min) {
+    width: 450px;
+  }
+
+  @media screen and(min-width: $desktop) {
+    width: 358px;
+    margin-bottom: 0;
+  }
+}
+
+.icon-follow {
+  margin-left: 10px;
+}

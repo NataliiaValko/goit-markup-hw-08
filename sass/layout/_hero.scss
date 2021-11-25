@@ -1,0 +1,92 @@
+.hero {
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 400px;
+  width: auto;
+  max-width: $mobile;
+  height: 400px;
+
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-image: linear-gradient(to right, $gradient-hero, $gradient-hero),
+    url(../images/hero/hero-480-1.jpg);
+  background-color: $background-color-hero;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, $gradient-hero, $gradient-hero),
+      url(../images/hero/hero-480-2.jpg);
+  }
+
+  @media screen and (min-width: calc(#{$mobile} + 1px)) {
+    max-width: $tablet-min;
+
+    background-image: linear-gradient(to right, $gradient-hero, $gradient-hero),
+      url(../images/hero/hero-768-1.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          $gradient-hero,
+          $gradient-hero
+        ),
+        url(../images/hero/hero-768-2.jpg);
+    }
+  }
+
+  @media screen and (min-width: calc(#{$tablet-min} + 1px)) {
+    max-width: 1600px;
+    min-height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to right, $gradient-hero, $gradient-hero),
+      url(../images/hero/hero-1600-1.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          $gradient-hero,
+          $gradient-hero
+        ),
+        url(../images/hero/hero-1600-2.jpg);
+    }
+  }
+
+  &-object {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+
+    @media screen and (min-width: $desktop) {
+      max-width: 696px;
+    }
+  }
+}
+
+.hero-title {
+  font-weight: 900;
+  color: $color-light-main;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 30px;
+  line-height: 1.615;
+  letter-spacing: 0.06em;
+  font-size: 5.42vw;
+
+  @media screen and (min-width: $mobile) {
+    font-size: 26px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}

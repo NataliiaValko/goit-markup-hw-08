@@ -1,0 +1,39 @@
+.logo {
+  display: inline-block;
+  color: $color-accent;
+  font-family: $font-family-logo;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.167;
+
+  &-right-part-dark {
+    color: $color-logo-dark;
+  }
+
+  &-right-part-light {
+    color: $color-light-main;
+  }
+
+  &-footer {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: 1.192;
+  }
+
+  &-nav {
+    padding: 16px 0;
+
+    @media screen and (min-width: $tablet-min) {
+      padding: 26px 0;
+      margin-right: 88px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 24px 0;
+      margin-right: 93px;
+    }
+  }
+}

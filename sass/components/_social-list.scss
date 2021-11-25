@@ -1,0 +1,13 @@
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-list-mobile {
+  justify-content: flex-start;
+
+  @media screen and (min-width: $tablet-min) {
+    display: none;
+  }
+}

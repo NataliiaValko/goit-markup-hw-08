@@ -1,0 +1,22 @@
+.section {
+  @include sectionPaddingVertical(60px, 60px);
+
+  @media screen and(min-width: $desktop) {
+    @include sectionPaddingVertical();
+  }
+
+  &-background {
+    @include sectionPaddingVertical(60px, 60px);
+    background-color: $background-color-team;
+
+    @media screen and(min-width: $desktop) {
+      @include sectionPaddingVertical();
+    }
+  }
+}
+
+.section-none {
+  @media screen and(max-width: $tablet-max) {
+    display: none;
+  }
+}

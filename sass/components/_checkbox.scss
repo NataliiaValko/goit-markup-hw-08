@@ -1,0 +1,78 @@
+.checkbox-label,
+.conditions {
+  line-height: 1.167;
+  @media screen and(min-width: $desktop) {
+    line-height: 1.714;
+  }
+}
+
+.checkbox-label {
+  font-size: 12px;
+
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  text-align: left;
+  margin-left: 24px;
+  @media screen and(min-width: $desktop) {
+    margin-left: 36px;
+    font-size: 14px;
+  }
+}
+
+.checkbox-label::before {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: -13px;
+
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  background-image: url(../images/svg/check-off.svg);
+  transition: background-image $time-main $timing-function-main,
+    background-color $time-main $timing-function-main;
+  .checkbox-consent:checked + & {
+    background-image: url(../images/svg/check-on.svg);
+    background-color: $color-accent;
+  }
+
+  .checkbox-consent:focus + &,
+  .checkbox-consent:focus:checked + & {
+    box-shadow: 0 0 0 1px rgb(16, 16, 16);
+  }
+
+  .checkbox-consent:hover + & {
+    cursor: pointer;
+  }
+}
+
+.conditions {
+  position: relative;
+  display: inline-block;
+  color: $color-accent;
+  text-decoration: none;
+  &::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: $color-accent;
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.checkbox-field {
+  position: relative;
+  width: auto;
+  margin-bottom: 30px;
+}
+
+.checkbox-consent {
+  position: absolute;
+  appearance: none;
+}
